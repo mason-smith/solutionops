@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to SolutionOps.">
+  <main>
+    <h1>
+      Welcome to the former site of <span class="text-gradient">SolutionOps</span>
+    </h1>
+    <p>Some years ago I decided to leave the independent contracting life behind me and pursue full time employment.</p>
+    <p>
+      I am now happily employed at i4-Insight where I organize big data into easy-to-interpret visualizations and
+      predictive analytics.
+    </p>
+
+    <p>I am not active on social media but you can scope some weird projects and experiments on my Github</p>
+
+    <p>I have a "blog" called WeirdJS where I just kind of say what's on my mind.</p>
+  </main>
+</Layout>
+
+<style>
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
