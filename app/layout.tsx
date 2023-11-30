@@ -8,6 +8,7 @@ import './global.css';
 import { cn } from '@solutionops/utils';
 
 export const metadata = {
+  metadataBase: new URL('https://www.solutionops.com/'),
   title: 'Home | SolutionOps',
   description:
     'SolutionOps is a custom software solution company that helps businesses grow. We build custom software solutions to help maximize small to medium sized businesses.',
@@ -26,23 +27,36 @@ export const metadata = {
     title: 'SolutionOps',
     description:
       'SolutionOps is a custom software solution company that helps businesses grow. We build custom software solutions to help maximize small to medium sized businesses.',
+    url: 'https://www.solutionops.com/',
     siteName: 'SolutionOps',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1534665482403-a909d0d97c67?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        width: 1800,
+        height: 1600,
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        width: 800,
+        height: 600,
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   nocache: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: false,
+  //     noimageindex: true,
+  //     'max-video-preview': -1,
+  //     'max-image-preview': 'large',
+  //     'max-snippet': -1,
+  //   },
+  // },
 };
 
 export const viewport = {
