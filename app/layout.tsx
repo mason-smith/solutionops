@@ -44,19 +44,19 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  // robots: {
-  //   index: true,
-  //   follow: true,
-  //   nocache: true,
-  //   googleBot: {
-  //     index: true,
-  //     follow: false,
-  //     noimageindex: true,
-  //     'max-video-preview': -1,
-  //     'max-image-preview': 'large',
-  //     'max-snippet': -1,
-  //   },
-  // },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export const viewport = {
