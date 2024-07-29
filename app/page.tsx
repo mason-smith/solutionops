@@ -12,8 +12,9 @@ export default async function Index() {
           Some years ago I decided to leave the independent contracting life behind me and pursue full time employment.
         </p>
         <p className="mt-4">
-          Now I am a technical lead engineer at Bamboo Rose. My inadvertent specialty is rearchitecting legacy codebases
-          into modern, maintainable, and scalable web and cross-platform applications.
+          Now I am an Engineering Manager at Bamboo Rose. My inadvertent specialty is rearchitecting legacy codebases
+          into modern, maintainable, and scalable web and cross-platform applications. I believe that people come first,
+          and that happy engineers make happier customers.
         </p>
         <p className="mt-4">
           My schedule is pretty full these days but I am always open to new opportunities. If you have a project you
