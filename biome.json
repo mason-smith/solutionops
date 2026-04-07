@@ -85,6 +85,16 @@
       }
     },
     {
+      "includes": ["src/styles.css"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noImportantStyles": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": ["src/components/ui/*.tsx"],
       "linter": {
         "rules": {

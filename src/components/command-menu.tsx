@@ -55,7 +55,7 @@ export function CommandMenu() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 rounded-md border border-border px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+        className="inline-flex min-h-9 min-w-9 items-center justify-center gap-1.5 rounded-md border border-border px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
         <span className="sm:hidden">Menu</span>
         <kbd className="hidden font-sans text-[10px] sm:inline">&#8984;K</kbd>
@@ -69,7 +69,7 @@ export function CommandMenu() {
                 key={item.label}
                 type="button"
                 onClick={() => handleSelect(item)}
-                className="flex items-center gap-3 px-4 py-2.5 text-left text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                className="flex items-center gap-3 px-4 py-2.5 text-left text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:bg-accent focus-visible:text-foreground focus-visible:outline-none"
               >
                 <span className="text-muted-foreground">{item.icon}</span>
                 {item.label}

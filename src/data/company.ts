@@ -3,7 +3,7 @@ export const company = {
   owner: "Mason Smith",
   tagline: "Crafted software.",
   description:
-    "I'm Mason, a Silicon Valley bred software engineer now based in Kentucky. I treat every project as a craft, not a transaction. Whether it's a website for a local business or a barrel tracking system for a distillery, it gets the same care. When it ships with my name on it, it's built right.",
+    "I'm Mason, a Silicon Valley bred software engineer now based in Kentucky. I treat every project as a craft, not a transaction. Whether you need a static website or a fully custom application, your project gets the same craftsmanship. When it ships with my name on it, it's built right.",
   email: "mason.smith@solutionops.com",
   github: "https://github.com/solution-ops",
   linkedin: "https://linkedin.com/in/masonsmith",

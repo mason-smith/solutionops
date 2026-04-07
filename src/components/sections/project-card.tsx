@@ -6,12 +6,13 @@ import type { Project } from "@/data/projects"
 
 type ProjectCardProps = {
   project: Project
+  featured?: boolean
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   return (
     <Link to="/projects/$slug" params={{ slug: project.slug }} className="block no-underline">
-      <Card className="h-full transition-all hover:bg-accent/50">
+      <Card className="h-full transition-colors hover:bg-accent/50">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div>
@@ -29,14 +30,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-4">
+          {featured && <p className="max-w-[56ch] text-sm leading-6 text-muted-foreground">{project.description}</p>}
           <div className="flex flex-wrap gap-1.5">
-            {project.stack.slice(0, 4).map((tech) => (
+            {project.stack.slice(0, featured ? 6 : 4).map((tech) => (
               <Badge key={tech} variant="outline">
                 {tech}
               </Badge>
             ))}
-            {project.stack.length > 4 && <Badge variant="outline">+{project.stack.length - 4}</Badge>}
+            {project.stack.length > (featured ? 6 : 4) && (
+              <Badge variant="outline">+{project.stack.length - (featured ? 6 : 4)}</Badge>
+            )}
           </div>
         </CardContent>
       </Card>

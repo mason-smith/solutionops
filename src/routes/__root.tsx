@@ -37,6 +37,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="min-h-svh antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-100 focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:ring-2 focus:ring-ring"
+        >
+          Skip to content
+        </a>
         {children}
         <Scripts />
       </body>
@@ -60,7 +66,7 @@ function RootComponent() {
     <ThemeProvider defaultTheme="dark">
       <div className="flex min-h-svh flex-col">
         <SiteHeader />
-        <main className="mx-auto w-full max-w-5xl flex-1 px-6">
+        <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-6">
           <Outlet />
         </main>
         <SiteFooter />
