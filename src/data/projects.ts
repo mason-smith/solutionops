@@ -44,7 +44,7 @@ export const projects: Array<Project> = [
       "TanStack Router",
       "Turborepo",
     ],
-    url: "https://proofbarrel.co",
+    url: "https://proof-barrel-prod.mason-smith.workers.dev",
     github: "https://github.com/solution-ops/proof.barrel",
     featured: true,
     status: "live",
@@ -91,6 +91,7 @@ export const projects: Array<Project> = [
     description:
       "Most task apps try to do everything. This one does less, better. Clean categories, keyboard-first navigation, and nothing between you and your work. Every feature gets its own test environment with automated checks before anything touches production.",
     stack: ["React 19", "Hono", "Cloudflare Workers", "Neon Postgres", "Drizzle ORM", "TanStack Router", "Turborepo"],
+    url: "https://task.solutionstack.dev",
     github: "https://github.com/solution-ops/task.cloud",
     status: "live",
     images: {
@@ -113,6 +114,7 @@ export const projects: Array<Project> = [
     description:
       "A Pacific Northwest contractor needed a site that matched the quality of their craftsmanship. Photography-first, warm tones, and a layout that lets the work breathe. Server-rendered and deployed to the edge. Ready for a CMS whenever they outgrow static content.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Cloudflare Pages", "Vite"],
+    url: "https://tamarack-bc7.pages.dev",
     github: "https://github.com/solution-ops/tamarack",
     status: "in-development",
     images: {
@@ -129,25 +131,26 @@ export const projects: Array<Project> = [
     },
   },
   {
-    slug: "salon",
+    slug: "polishd",
     name: "Polish'd",
     tagline: "Nail art deserves better than a template",
     description:
       "The owner of Polish'd came to me because every nail artist website she found looked the same. So we built something that feels like her work: dark, bold, and unapologetically artistic. Smooth animations, generous whitespace, and photography that does the talking. I'm also helping revitalize her business with SEO work after she started losing clients.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Motion", "Cloudflare Pages", "Vite", "SEO"],
+    url: "https://polishd-nail-spa.pages.dev",
     github: "https://github.com/solution-ops/salon",
     featured: true,
     status: "in-development",
     images: {
       hero: {
-        dark: img("salon", "home-desktop-dark.webp"),
-        light: img("salon", "home-desktop-light.webp"),
+        dark: img("polishd", "home-desktop-dark.webp"),
+        light: img("polishd", "home-desktop-light.webp"),
         alt: "Polish'd nail salon home page",
       },
       fan: [
-        { src: img("salon", "home-mobile-dark.webp"), alt: "Polish'd mobile home page" },
-        { src: img("salon", "about-mobile-dark.webp"), alt: "About page on mobile" },
-        { src: img("salon", "about-mobile-light.webp"), alt: "About page in light mode" },
+        { src: img("polishd", "home-mobile-dark.webp"), alt: "Polish'd mobile home page" },
+        { src: img("polishd", "about-mobile-dark.webp"), alt: "About page on mobile" },
+        { src: img("polishd", "about-mobile-light.webp"), alt: "About page in light mode" },
       ],
     },
   },
