@@ -1,21 +1,34 @@
 import { ElevatedSurface } from "@/components/screenshot-frame"
-import { useTheme } from "@/components/theme-provider"
 import type { ProjectHero } from "@/data/projects"
 import { cn } from "@/lib/utils"
 
 type ProjectHeroImageProps = {
   hero: ProjectHero
+  eager?: boolean
   className?: string
 }
 
-export function ProjectHeroImage({ hero, className }: ProjectHeroImageProps) {
-  const { theme } = useTheme()
-  const resolved = theme === "system" ? "dark" : theme
-  const src = resolved === "dark" ? hero.dark : hero.light
-
+export function ProjectHeroImage({ hero, eager = false, className }: ProjectHeroImageProps) {
   return (
     <ElevatedSurface className={cn(className)}>
-      <img src={src} alt={hero.alt} loading="lazy" className="w-full object-cover object-top" />
+      <img
+        src={hero.dark}
+        alt={hero.alt}
+        width={2888}
+        height={1798}
+        loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : "auto"}
+        className="hidden w-full object-cover object-top dark:block"
+      />
+      <img
+        src={hero.light}
+        alt={hero.alt}
+        width={2888}
+        height={1798}
+        loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : "auto"}
+        className="block w-full object-cover object-top dark:hidden"
+      />
     </ElevatedSurface>
   )
 }

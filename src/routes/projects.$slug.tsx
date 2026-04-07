@@ -57,7 +57,7 @@ function ProjectPage() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
           {project.images?.hero && (
             <div className="sm:w-3/5">
-              <ProjectHeroImage hero={project.images.hero} />
+              <ProjectHeroImage hero={project.images.hero} eager />
             </div>
           )}
           <div className="space-y-6 sm:w-2/5">

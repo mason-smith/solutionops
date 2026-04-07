@@ -41,7 +41,7 @@ function FeaturedRow({ project, imageFirst }: { project: Project; imageFirst: bo
       <div className={cn("flex flex-col gap-4 sm:flex-row sm:items-center", !imageFirst && "sm:flex-row-reverse")}>
         {project.images?.hero && (
           <div className="sm:w-1/2">
-            <ProjectHeroImage hero={project.images.hero} />
+            <ProjectHeroImage hero={project.images.hero} eager />
           </div>
         )}
         <div className="space-y-2 sm:w-1/2">
