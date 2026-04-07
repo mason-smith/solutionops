@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "@phosphor-icons/react"
 import { Link } from "@tanstack/react-router"
+import { ProjectHeroImage } from "@/components/project-hero-image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Project } from "@/data/projects"
@@ -31,6 +32,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           </div>
         </CardHeader>
         <CardContent className="space-y-4">
+          {featured && project.images?.hero && <ProjectHeroImage hero={project.images.hero} />}
           {featured && <p className="max-w-[56ch] text-sm leading-6 text-muted-foreground">{project.description}</p>}
           <div className="flex flex-wrap gap-1.5">
             {project.stack.slice(0, featured ? 6 : 4).map((tech) => (

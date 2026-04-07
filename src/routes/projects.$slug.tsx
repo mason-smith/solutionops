@@ -1,5 +1,7 @@
 import { ArrowLeftIcon, ArrowUpRightIcon } from "@phosphor-icons/react"
 import { createFileRoute, Link, notFound } from "@tanstack/react-router"
+import { ProjectGallery } from "@/components/project-gallery"
+import { ProjectHeroImage } from "@/components/project-hero-image"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { projects } from "@/data/projects"
@@ -52,7 +54,13 @@ function ProjectPage() {
           <p className="text-base text-muted-foreground/80">{project.tagline}</p>
         </div>
 
+        {project.images?.hero && <ProjectHeroImage hero={project.images.hero} />}
+
         <p className="max-w-[56ch] leading-7 text-muted-foreground">{project.description}</p>
+
+        {project.images?.gallery && project.images.gallery.length > 0 && (
+          <ProjectGallery images={project.images.gallery} />
+        )}
 
         <div className="space-y-3 border-t border-border/40 pt-8">
           <h2 className="text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">Stack</h2>
