@@ -12,11 +12,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SolutionOps | Software, from scratch." },
+      { title: "SolutionOps | Crafted software." },
       {
         name: "description",
         content:
-          "Mason Smith is a software engineer who left Silicon Valley for Kentucky. He still builds the same caliber of software, just with more intention.",
+          "Mason Smith is a Silicon Valley bred software engineer in Kentucky. Every project is a craft, not a transaction. When it ships with his name on it, it's built right.",
       },
     ],
     links: [

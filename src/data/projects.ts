@@ -13,7 +13,7 @@ export type Project = {
 export const projects: Array<Project> = [
   {
     slug: "rise-coffee",
-    name: "Rise.Coffee",
+    name: "Rise Coffee",
     tagline: "Brew tracking for people who care about the details",
     description:
       "I built this because I wanted a better way to track my coffee brewing. Not a spreadsheet, not a notes app. A real tool that helps you refine your process over time. Every pull request gets its own database and deployment so nothing ships untested.",
@@ -25,7 +25,7 @@ export const projects: Array<Project> = [
   },
   {
     slug: "task-cloud",
-    name: "Task.Cloud",
+    name: "Task Cloud",
     tagline: "Task management that respects your time",
     description:
       "Most task apps try to do everything. This one does less, better. Clean categories, keyboard-first navigation, and nothing between you and your work. Each feature branch gets its own environment with automated tests before anything goes live.",
