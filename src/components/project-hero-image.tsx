@@ -13,11 +13,8 @@ export function ProjectHeroImage({ hero, className }: ProjectHeroImageProps) {
   const src = resolved === "dark" ? hero.dark : hero.light
 
   return (
-    <img
-      src={src}
-      alt={hero.alt}
-      loading="lazy"
-      className={cn("w-full rounded-lg border border-border/40 object-cover", className)}
-    />
+    <div className={cn("overflow-hidden rounded-lg border border-border/40", className)}>
+      <img src={src} alt={hero.alt} loading="lazy" className="aspect-16/10 w-full object-cover object-top" />
+    </div>
   )
 }
