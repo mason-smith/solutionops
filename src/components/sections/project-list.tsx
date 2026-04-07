@@ -17,7 +17,7 @@ export function ProjectList() {
       </h2>
 
       {featured.length > 0 && (
-        <div className="space-y-10">
+        <div className="space-y-8">
           {featured.map((project, i) => (
             <FeaturedRow key={project.slug} project={project} imageFirst={i % 2 === 0} />
           ))}
@@ -25,7 +25,7 @@ export function ProjectList() {
       )}
 
       {rest.length > 0 && (
-        <div className={cn("divide-y divide-border/40", featured.length > 0 && "mt-10 border-t border-border/40")}>
+        <div className={cn("divide-y divide-border/40", featured.length > 0 && "mt-8 border-t border-border/40")}>
           {rest.map((project) => (
             <IndexRow key={project.slug} project={project} />
           ))}
@@ -38,13 +38,13 @@ export function ProjectList() {
 function FeaturedRow({ project, imageFirst }: { project: Project; imageFirst: boolean }) {
   return (
     <Link to="/projects/$slug" params={{ slug: project.slug }} className="group block no-underline">
-      <div className={cn("flex flex-col gap-6 sm:flex-row sm:items-center", !imageFirst && "sm:flex-row-reverse")}>
+      <div className={cn("flex flex-col gap-4 sm:flex-row sm:items-center", !imageFirst && "sm:flex-row-reverse")}>
         {project.images?.hero && (
           <div className="sm:w-1/2">
             <ProjectHeroImage hero={project.images.hero} />
           </div>
         )}
-        <div className="space-y-3 sm:w-1/2">
+        <div className="space-y-2 sm:w-1/2">
           <div className="flex items-center gap-2">
             <h3 className="text-xl font-medium tracking-tight">{project.name}</h3>
             <Badge variant={project.status === "live" ? "secondary" : "outline"}>
@@ -52,11 +52,6 @@ function FeaturedRow({ project, imageFirst }: { project: Project; imageFirst: bo
             </Badge>
           </div>
           <p className="text-sm text-muted-foreground">{project.tagline}</p>
-          <p className="max-w-[44ch] text-sm leading-6 text-muted-foreground/70">{project.description}</p>
-          <span className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors group-hover:text-foreground">
-            View project
-            <ArrowRightIcon size={12} className="transition-transform group-hover:translate-x-0.5" />
-          </span>
         </div>
       </div>
     </Link>
