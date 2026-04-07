@@ -14,8 +14,8 @@ export function ProjectHeroImage({ hero, eager = false, className }: ProjectHero
       <img
         src={hero.dark}
         alt={hero.alt}
-        width={2888}
-        height={1798}
+        width={1280}
+        height={798}
         loading={eager ? "eager" : "lazy"}
         fetchPriority={eager ? "high" : "auto"}
         className="hidden w-full object-cover object-top dark:block"
@@ -23,8 +23,8 @@ export function ProjectHeroImage({ hero, eager = false, className }: ProjectHero
       <img
         src={hero.light}
         alt={hero.alt}
-        width={2888}
-        height={1798}
+        width={1280}
+        height={798}
         loading={eager ? "eager" : "lazy"}
         fetchPriority={eager ? "high" : "auto"}
         className="block w-full object-cover object-top dark:hidden"
