@@ -14,9 +14,9 @@ export const projects: Array<Project> = [
   {
     slug: "rise-coffee",
     name: "Rise.Coffee",
-    tagline: "Brew tracking for the obsessed",
+    tagline: "Brew tracking for people who care about the details",
     description:
-      "A specialty coffee brewing tracker for home enthusiasts. Log brews, track beans, manage equipment, and refine your craft over time. Built as a full-stack monorepo with ephemeral PR environments. Every pull request gets its own isolated database and deployment.",
+      "I built this because I wanted a better way to track my coffee brewing. Not a spreadsheet, not a notes app. A real tool that helps you refine your process over time. Every pull request gets its own database and deployment so nothing ships untested.",
     stack: ["React 19", "Hono", "Cloudflare Workers", "Neon Postgres", "Drizzle ORM", "TanStack Router", "Turborepo"],
     role: "Solo developer",
     url: "https://app.risecoffee.co",
@@ -26,9 +26,9 @@ export const projects: Array<Project> = [
   {
     slug: "task-cloud",
     name: "Task.Cloud",
-    tagline: "Task management, stripped to the essentials",
+    tagline: "Task management that respects your time",
     description:
-      "A modern task management app built for speed and clarity. Category-based organization, keyboard-first interaction, and a clean interface that gets out of the way. Features dynamic feature environments per PR with ephemeral Neon branches and automated E2E testing against preview deployments.",
+      "Most task apps try to do everything. This one does less, better. Clean categories, keyboard-first navigation, and nothing between you and your work. Each feature branch gets its own environment with automated tests before anything goes live.",
     stack: ["React 19", "Hono", "Cloudflare Workers", "Neon Postgres", "Drizzle ORM", "TanStack Router", "Turborepo"],
     role: "Solo developer",
     github: "https://github.com/solution-ops/task.cloud",
@@ -37,9 +37,9 @@ export const projects: Array<Project> = [
   {
     slug: "proof-barrel",
     name: "Proof Barrel",
-    tagline: "Barrel tracking and rickhouse management for craft distilleries",
+    tagline: "Barrel tracking for craft distilleries",
     description:
-      "A system of record for craft distilleries. Visual rickhouse grids, gauging logs optimized for one-handed mobile use, mashbill recipes with lineage tracking, and TTB compliance reporting. Every action is timestamped, attributed, and audit-ready by default.",
+      "Built for distillers who need to know exactly what's in their rickhouse. Visual barrel grids, gauging logs you can fill out one-handed while wearing gloves, mashbill tracking, and TTB reports that write themselves. Every action is timestamped and audit-ready.",
     stack: [
       "React 19",
       "Hono",
@@ -58,9 +58,9 @@ export const projects: Array<Project> = [
   {
     slug: "tamarack",
     name: "Tamarack",
-    tagline: "A Pacific Northwest remodeling contractor, online",
+    tagline: "A remodeling company that looks as good as their work",
     description:
-      "Marketing site for a PNW home remodeling contractor. Photography-driven, editorial layout with a warm, crafted aesthetic. Built with TanStack Start for server-side rendering and deployed to Cloudflare Pages. Content is data-driven and CMS-migration ready.",
+      "A Pacific Northwest contractor needed a site that matched the quality of their craftsmanship. Photography-first, warm tones, and a layout that lets the work breathe. Server-rendered and deployed to the edge. Ready for a CMS whenever they outgrow static content.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Cloudflare Pages", "Vite"],
     role: "Solo developer",
     github: "https://github.com/solution-ops/tamarack",
@@ -69,9 +69,9 @@ export const projects: Array<Project> = [
   {
     slug: "salon",
     name: "Salon",
-    tagline: "Custom nail art deserves a custom experience",
+    tagline: "Nail art deserves better than a template",
     description:
-      "A marketing site for a nail salon that treats nail art as wearable art. Dark-first design with a luxury aesthetic. Minimalist UI, generous whitespace, and editorial photography. Built with TanStack Start and Motion for smooth, purposeful animations.",
+      "A salon owner came to me because every nail artist website she found looked the same. So we built something that feels like her work: dark, bold, and unapologetically artistic. Smooth animations, generous whitespace, and photography that does the talking.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Motion", "Cloudflare Pages", "Vite"],
     role: "Solo developer",
     github: "https://github.com/solution-ops/salon",

@@ -1,8 +1,9 @@
 export const company = {
   name: "SolutionOps",
+  owner: "Mason Smith",
   tagline: "Software, from scratch.",
   description:
-    "Freelance software engineering for teams that need things built right. Full-stack TypeScript, cloud-native architecture, and interfaces that feel considered, not generated.",
+    "I'm Mason, a software engineer who left Silicon Valley for Kentucky. I still build the same caliber of software, just with more intention and less overhead. If you need something built right the first time, let's talk.",
   email: "mason.smith@solutionops.com",
   github: "https://github.com/solution-ops",
   linkedin: "https://linkedin.com/in/masonsmith",

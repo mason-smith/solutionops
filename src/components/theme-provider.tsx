@@ -28,10 +28,7 @@ export function ThemeProvider({
   children: React.ReactNode
   defaultTheme?: Theme
 }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === "undefined") return defaultTheme
-    return (localStorage.getItem(STORAGE_KEY) as Theme) || defaultTheme
-  })
+  const [theme, setThemeState] = useState<Theme>(defaultTheme)
 
   const applyTheme = useCallback((t: Theme) => {
     const resolved = getResolvedTheme(t)
@@ -39,6 +36,16 @@ export function ThemeProvider({
     root.classList.remove("light", "dark")
     root.classList.add(resolved)
   }, [])
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY) as Theme | null
+    if (stored && stored !== defaultTheme) {
+      setThemeState(stored)
+      applyTheme(stored)
+    } else {
+      applyTheme(defaultTheme)
+    }
+  }, [defaultTheme, applyTheme])
 
   useEffect(() => {
     applyTheme(theme)

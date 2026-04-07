@@ -27,17 +27,17 @@ function ProjectPage() {
     <div className="py-16 sm:py-24">
       <Link
         to="/"
-        className="mb-12 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
       >
         <ArrowLeftIcon size={14} />
         Back
       </Link>
 
-      <div className="mt-8 space-y-8">
+      <div className="mt-12 space-y-12">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <h1 className="text-3xl font-medium tracking-tight">{project.name}</h1>
-            <Badge variant={project.status === "live" ? "default" : "secondary"}>
+            <Badge variant={project.status === "live" ? "secondary" : "outline"}>
               {project.status === "live" ? "Live" : "In development"}
             </Badge>
           </div>
@@ -46,18 +46,18 @@ function ProjectPage() {
 
         <p className="max-w-2xl leading-relaxed text-muted-foreground">{project.description}</p>
 
-        <div className="space-y-3">
+        <div className="space-y-3 border-t border-border/40 pt-8">
           <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Stack</h2>
           <div className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
-              <Badge key={tech} variant="secondary">
+              <Badge key={tech} variant="outline">
                 {tech}
               </Badge>
             ))}
           </div>
         </div>
 
-        <div className="flex gap-4 pt-4">
+        <div className="flex gap-4">
           {project.url && (
             <a
               href={project.url}

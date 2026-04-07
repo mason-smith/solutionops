@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <CardDescription>{project.tagline}</CardDescription>
             </div>
             <div className="flex items-center gap-2">
-              <Badge variant={project.status === "live" ? "default" : "secondary"}>
+              <Badge variant={project.status === "live" ? "secondary" : "outline"}>
                 {project.status === "live" ? "Live" : "In development"}
               </Badge>
               <ArrowRightIcon

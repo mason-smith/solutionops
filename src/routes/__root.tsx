@@ -1,4 +1,4 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router"
+import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/react-router"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -16,7 +16,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Freelance software engineering. Full-stack TypeScript, cloud-native architecture, and interfaces that feel considered.",
+          "Mason Smith is a software engineer who left Silicon Valley for Kentucky. He still builds the same caliber of software, just with more intention.",
       },
     ],
     links: [
@@ -27,6 +27,7 @@ export const Route = createRootRoute({
   }),
   component: RootComponent,
   shellComponent: RootDocument,
+  notFoundComponent: NotFound,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -40,6 +41,17 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+  )
+}
+
+function NotFound() {
+  return (
+    <div className="flex flex-1 flex-col items-center justify-center py-24">
+      <p className="text-sm text-muted-foreground">This page doesn't exist.</p>
+      <Link to="/" className="mt-4 text-sm text-foreground underline underline-offset-4 hover:text-muted-foreground">
+        Back home
+      </Link>
+    </div>
   )
 }
 
