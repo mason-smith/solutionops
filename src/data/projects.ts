@@ -50,14 +50,14 @@ export const projects: Array<Project> = [
     status: "live",
     images: {
       hero: {
-        dark: img("proof-barrel", "dashboard-desktop-dark.png"),
-        light: img("proof-barrel", "dashboard-desktop-light.png"),
+        dark: img("proof-barrel", "dashboard-desktop-dark.webp"),
+        light: img("proof-barrel", "dashboard-desktop-light.webp"),
         alt: "Proof Barrel dashboard showing barrel inventory",
       },
       fan: [
-        { src: img("proof-barrel", "rickhouse-mobile-dark.png"), alt: "Rickhouse grid on mobile" },
-        { src: img("proof-barrel", "dashboard-mobile-dark.png"), alt: "Proof Barrel mobile dashboard" },
-        { src: img("proof-barrel", "barrel-detail-mobile-light.png"), alt: "Barrel detail on mobile" },
+        { src: img("proof-barrel", "rickhouse-mobile-dark.webp"), alt: "Rickhouse grid on mobile" },
+        { src: img("proof-barrel", "dashboard-mobile-dark.webp"), alt: "Proof Barrel mobile dashboard" },
+        { src: img("proof-barrel", "barrel-detail-mobile-light.webp"), alt: "Barrel detail on mobile" },
       ],
     },
   },
@@ -73,14 +73,14 @@ export const projects: Array<Project> = [
     status: "live",
     images: {
       hero: {
-        dark: img("rise-coffee", "dashboard-desktop-dark.png"),
-        light: img("rise-coffee", "dashboard-desktop-light.png"),
+        dark: img("rise-coffee", "dashboard-desktop-dark.webp"),
+        light: img("rise-coffee", "dashboard-desktop-light.webp"),
         alt: "Rise Coffee dashboard with brew history",
       },
       fan: [
-        { src: img("rise-coffee", "brew-log-mobile-dark.png"), alt: "Brew log on mobile" },
-        { src: img("rise-coffee", "dashboard-mobile-dark.png"), alt: "Rise Coffee mobile dashboard" },
-        { src: img("rise-coffee", "bean-detail-mobile-light.png"), alt: "Bean detail view" },
+        { src: img("rise-coffee", "brew-log-mobile-dark.webp"), alt: "Brew log on mobile" },
+        { src: img("rise-coffee", "dashboard-mobile-dark.webp"), alt: "Rise Coffee mobile dashboard" },
+        { src: img("rise-coffee", "bean-detail-mobile-light.webp"), alt: "Bean detail view" },
       ],
     },
   },
@@ -95,14 +95,14 @@ export const projects: Array<Project> = [
     status: "live",
     images: {
       hero: {
-        dark: img("task-cloud", "dashboard-desktop-dark.png"),
-        light: img("task-cloud", "dashboard-desktop-light.png"),
+        dark: img("task-cloud", "dashboard-desktop-dark.webp"),
+        light: img("task-cloud", "dashboard-desktop-light.webp"),
         alt: "Task Cloud dashboard with category view",
       },
       fan: [
-        { src: img("task-cloud", "dashboard-mobile-dark.png"), alt: "Task Cloud mobile dashboard" },
-        { src: img("task-cloud", "task-view-mobile-dark.png"), alt: "Task detail on mobile" },
-        { src: img("task-cloud", "task-view-mobile-light.png"), alt: "Task view in light mode" },
+        { src: img("task-cloud", "dashboard-mobile-dark.webp"), alt: "Task Cloud mobile dashboard" },
+        { src: img("task-cloud", "task-view-mobile-dark.webp"), alt: "Task detail on mobile" },
+        { src: img("task-cloud", "task-view-mobile-light.webp"), alt: "Task view in light mode" },
       ],
     },
   },
@@ -117,14 +117,14 @@ export const projects: Array<Project> = [
     status: "in-development",
     images: {
       hero: {
-        dark: img("tamarack", "home-desktop.png"),
-        light: img("tamarack", "home-desktop.png"),
+        dark: img("tamarack", "home-desktop.webp"),
+        light: img("tamarack", "home-desktop.webp"),
         alt: "Tamarack Remodel & Design home page",
       },
       fan: [
-        { src: img("tamarack", "home-mobile.png"), alt: "Tamarack mobile home page" },
-        { src: img("tamarack", "contact-mobile.png"), alt: "Contact page on mobile" },
-        { src: img("tamarack", "why-tamarack-mobile.png"), alt: "Why Tamarack on mobile" },
+        { src: img("tamarack", "home-mobile.webp"), alt: "Tamarack mobile home page" },
+        { src: img("tamarack", "contact-mobile.webp"), alt: "Contact page on mobile" },
+        { src: img("tamarack", "why-tamarack-mobile.webp"), alt: "Why Tamarack on mobile" },
       ],
     },
   },
@@ -140,14 +140,14 @@ export const projects: Array<Project> = [
     status: "in-development",
     images: {
       hero: {
-        dark: img("salon", "home-desktop-dark.png"),
-        light: img("salon", "home-desktop-light.png"),
+        dark: img("salon", "home-desktop-dark.webp"),
+        light: img("salon", "home-desktop-light.webp"),
         alt: "Polish'd nail salon home page",
       },
       fan: [
-        { src: img("salon", "home-mobile-dark.png"), alt: "Polish'd mobile home page" },
-        { src: img("salon", "about-mobile-dark.png"), alt: "About page on mobile" },
-        { src: img("salon", "about-mobile-light.png"), alt: "About page in light mode" },
+        { src: img("salon", "home-mobile-dark.webp"), alt: "Polish'd mobile home page" },
+        { src: img("salon", "about-mobile-dark.webp"), alt: "About page on mobile" },
+        { src: img("salon", "about-mobile-light.webp"), alt: "About page in light mode" },
       ],
     },
   },

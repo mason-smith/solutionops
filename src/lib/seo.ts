@@ -27,11 +27,16 @@ export function createSeoMeta({ title, description, path = "/", type = "website"
     { property: "og:url", content: canonicalUrl },
     { property: "og:site_name", content: SITE_NAME },
     { property: "og:locale", content: "en_US" },
+    { property: "og:image", content: `${SITE_URL}/og.png` },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:image:type", content: "image/png" },
 
     // Twitter
-    { name: "twitter:card", content: "summary" },
+    { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: pageTitle },
     { name: "twitter:description", content: pageDescription },
+    { name: "twitter:image", content: `${SITE_URL}/og.png` },
 
     // Geo targeting
     { name: "geo.region", content: "US-KY" },
