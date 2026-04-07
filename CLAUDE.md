@@ -1,10 +1,10 @@
 # SolutionOps
 
-Portfolio and marketing site for SolutionOps LLC — a freelance software engineering consultancy.
+Portfolio and marketing site for SolutionOps LLC, a freelance software engineering consultancy.
 
 ## Philosophy
 
-- Do things right, not fast — prioritize correctness, quality, and maintainability
+- Do things right, not fast. Prioritize correctness, quality, and maintainability
 - Always refer to official documentation (TanStack Start, shadcn, Tailwind CSS, Cloudflare Pages)
 - Use library-provided components and utilities instead of rolling custom solutions
 - Research assumptions against docs and current code before implementing
@@ -26,7 +26,7 @@ Portfolio and marketing site for SolutionOps LLC — a freelance software engine
 - Mobile-first responsive design
 - SOLID principles and separation of concerns
 - Prefer small files with scoped, composable modules
-- No barrel files — use direct imports with `@/` path alias
+- No barrel files. Use direct imports with `@/` path alias
 - Static-first; content data lives in `src/data/` (not inline in components)
 
 ## Commands
