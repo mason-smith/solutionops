@@ -52,6 +52,7 @@ function FeaturedRow({ project, imageFirst }: { project: Project; imageFirst: bo
             </Badge>
           </div>
           <p className="text-sm text-muted-foreground">{project.tagline}</p>
+          <p className="text-sm leading-6 text-muted-foreground/70">{project.description.split(". ")[0]}.</p>
         </div>
       </div>
     </Link>
