@@ -2,28 +2,27 @@ import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/r
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { createCanonicalLink, createJsonLd, createSeoMeta } from "@/lib/seo"
 
 import appCss from "../styles.css?url"
 
 const themeScript = `(function(){var t=localStorage.getItem("solutionops-theme")||"system";var r=t;if(t==="system"){r=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.classList.add(r)})();`
+
+const jsonLd = JSON.stringify(createJsonLd())
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SolutionOps | Crafted software." },
-      {
-        name: "description",
-        content:
-          "Mason Smith is a Silicon Valley bred software engineer in Kentucky. Every project is a craft, not a transaction. When it ships with his name on it, it's built right.",
-      },
+      ...createSeoMeta(),
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      createCanonicalLink("/"),
     ],
-    scripts: [{ children: themeScript }],
+    scripts: [{ children: themeScript }, { type: "application/ld+json", children: jsonLd }],
   }),
   component: RootComponent,
   shellComponent: RootDocument,

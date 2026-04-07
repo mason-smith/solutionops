@@ -3,6 +3,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { projects } from "@/data/projects"
+import { createCanonicalLink, createSeoMeta } from "@/lib/seo"
 import { cn } from "@/lib/utils"
 
 export const Route = createFileRoute("/projects/$slug")({
@@ -12,12 +13,19 @@ export const Route = createFileRoute("/projects/$slug")({
     if (!project) throw notFound()
     return { project }
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData?.project.name} | SolutionOps` },
-      { name: "description", content: loaderData?.project.tagline },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const project = loaderData?.project
+    return {
+      meta: project
+        ? createSeoMeta({
+            title: project.name,
+            description: project.tagline,
+            path: `/projects/${project.slug}`,
+          })
+        : [],
+      links: project ? [createCanonicalLink(`/projects/${project.slug}`)] : [],
+    }
+  },
 })
 
 function ProjectPage() {
