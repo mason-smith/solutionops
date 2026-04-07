@@ -1,7 +1,6 @@
 export type ProjectImage = {
   src: string
   alt: string
-  size: "desktop" | "mobile"
 }
 
 export type ProjectHero = {
@@ -18,10 +17,11 @@ export type Project = {
   stack: Array<string>
   url?: string
   github?: string
+  featured?: boolean
   status: "live" | "in-development" | "client"
   images?: {
     hero?: ProjectHero
-    gallery?: Array<ProjectImage>
+    fan?: [ProjectImage, ProjectImage, ProjectImage]
   }
 }
 
@@ -31,7 +31,7 @@ export const projects: Array<Project> = [
   {
     slug: "proof-barrel",
     name: "Proof Barrel",
-    tagline: "Barrel tracking for craft distilleries",
+    tagline: "Advanced barrel tracking for craft distilleries",
     description:
       "Built for distillers who need to know exactly what's in their rickhouse. Visual barrel grids, gauging logs you can fill out one-handed while wearing gloves, mashbill tracking, and compliance reports that write themselves. Every action is timestamped and audit-ready.",
     stack: [
@@ -46,6 +46,7 @@ export const projects: Array<Project> = [
     ],
     url: "https://proofbarrel.co",
     github: "https://github.com/solution-ops/proof.barrel",
+    featured: true,
     status: "live",
     images: {
       hero: {
@@ -53,18 +54,10 @@ export const projects: Array<Project> = [
         light: img("proof-barrel", "dashboard-desktop-light.png"),
         alt: "Proof Barrel dashboard showing barrel inventory",
       },
-      gallery: [
-        {
-          src: img("proof-barrel", "rickhouse-desktop-dark.png"),
-          alt: "Visual rickhouse grid layout",
-          size: "desktop",
-        },
-        { src: img("proof-barrel", "dashboard-mobile-dark.png"), alt: "Proof Barrel mobile dashboard", size: "mobile" },
-        {
-          src: img("proof-barrel", "barrel-detail-desktop-dark.png"),
-          alt: "Barrel detail view with gauging history",
-          size: "desktop",
-        },
+      fan: [
+        { src: img("proof-barrel", "rickhouse-mobile-dark.png"), alt: "Rickhouse grid on mobile" },
+        { src: img("proof-barrel", "dashboard-mobile-dark.png"), alt: "Proof Barrel mobile dashboard" },
+        { src: img("proof-barrel", "barrel-detail-mobile-light.png"), alt: "Barrel detail on mobile" },
       ],
     },
   },
@@ -84,10 +77,10 @@ export const projects: Array<Project> = [
         light: img("rise-coffee", "dashboard-desktop-light.png"),
         alt: "Rise Coffee dashboard with brew history",
       },
-      gallery: [
-        { src: img("rise-coffee", "dashboard-mobile-dark.png"), alt: "Rise Coffee mobile dashboard", size: "mobile" },
-        { src: img("rise-coffee", "brew-log-mobile-dark.png"), alt: "Brew log on mobile", size: "mobile" },
-        { src: img("rise-coffee", "bean-detail-mobile-light.png"), alt: "Bean detail view", size: "mobile" },
+      fan: [
+        { src: img("rise-coffee", "brew-log-mobile-dark.png"), alt: "Brew log on mobile" },
+        { src: img("rise-coffee", "dashboard-mobile-dark.png"), alt: "Rise Coffee mobile dashboard" },
+        { src: img("rise-coffee", "bean-detail-mobile-light.png"), alt: "Bean detail view" },
       ],
     },
   },
@@ -106,18 +99,10 @@ export const projects: Array<Project> = [
         light: img("task-cloud", "dashboard-desktop-light.png"),
         alt: "Task Cloud dashboard with category view",
       },
-      gallery: [
-        {
-          src: img("task-cloud", "task-view-desktop-dark.png"),
-          alt: "Task detail view",
-          size: "desktop",
-        },
-        { src: img("task-cloud", "dashboard-mobile-dark.png"), alt: "Task Cloud mobile dashboard", size: "mobile" },
-        {
-          src: img("task-cloud", "task-view-mobile-light.png"),
-          alt: "Task detail on mobile in light mode",
-          size: "mobile",
-        },
+      fan: [
+        { src: img("task-cloud", "dashboard-mobile-dark.png"), alt: "Task Cloud mobile dashboard" },
+        { src: img("task-cloud", "task-view-mobile-dark.png"), alt: "Task detail on mobile" },
+        { src: img("task-cloud", "task-view-mobile-light.png"), alt: "Task view in light mode" },
       ],
     },
   },
@@ -136,14 +121,10 @@ export const projects: Array<Project> = [
         light: img("tamarack", "home-desktop.png"),
         alt: "Tamarack Remodel & Design home page",
       },
-      gallery: [
-        {
-          src: img("tamarack", "portfolio-grid-desktop.png"),
-          alt: "Portfolio grid showing completed projects",
-          size: "desktop",
-        },
-        { src: img("tamarack", "home-mobile.png"), alt: "Tamarack mobile home page", size: "mobile" },
-        { src: img("tamarack", "process-desktop.png"), alt: "Remodeling process overview", size: "desktop" },
+      fan: [
+        { src: img("tamarack", "home-mobile.png"), alt: "Tamarack mobile home page" },
+        { src: img("tamarack", "contact-mobile.png"), alt: "Contact page on mobile" },
+        { src: img("tamarack", "why-tamarack-mobile.png"), alt: "Why Tamarack on mobile" },
       ],
     },
   },
@@ -155,6 +136,7 @@ export const projects: Array<Project> = [
       "The owner of Polish'd came to me because every nail artist website she found looked the same. So we built something that feels like her work: dark, bold, and unapologetically artistic. Smooth animations, generous whitespace, and photography that does the talking. I'm also helping revitalize her business with SEO work after she started losing clients.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Motion", "Cloudflare Pages", "Vite", "SEO"],
     github: "https://github.com/solution-ops/salon",
+    featured: true,
     status: "in-development",
     images: {
       hero: {
@@ -162,14 +144,10 @@ export const projects: Array<Project> = [
         light: img("salon", "home-desktop-light.png"),
         alt: "Polish'd nail salon home page",
       },
-      gallery: [
-        {
-          src: img("salon", "services-desktop-dark.png"),
-          alt: "Services page with pricing",
-          size: "desktop",
-        },
-        { src: img("salon", "home-mobile-dark.png"), alt: "Polish'd mobile home page", size: "mobile" },
-        { src: img("salon", "about-mobile-light.png"), alt: "About page on mobile in light mode", size: "mobile" },
+      fan: [
+        { src: img("salon", "home-mobile-dark.png"), alt: "Polish'd mobile home page" },
+        { src: img("salon", "about-mobile-dark.png"), alt: "About page on mobile" },
+        { src: img("salon", "about-mobile-light.png"), alt: "About page in light mode" },
       ],
     },
   },

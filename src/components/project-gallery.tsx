@@ -1,47 +1,21 @@
 import type { ProjectImage } from "@/data/projects"
-import { cn } from "@/lib/utils"
 
 type ProjectGalleryProps = {
-  images: Array<ProjectImage>
+  images: [ProjectImage, ProjectImage, ProjectImage]
 }
 
 export function ProjectGallery({ images }: ProjectGalleryProps) {
-  const desktopImages = images.filter((i) => i.size === "desktop")
-  const mobileImages = images.filter((i) => i.size === "mobile")
-
   return (
-    <div className="space-y-3">
-      {desktopImages.length > 0 && (
-        <div className="flex gap-3">
-          {desktopImages.map((image) => (
-            <div key={image.src} className="min-w-0 flex-1 overflow-hidden rounded-lg border border-border/40">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                className="aspect-16/10 w-full object-cover object-top"
-              />
-            </div>
-          ))}
-        </div>
-      )}
-      {mobileImages.length > 0 && (
-        <div className="flex justify-center gap-3">
-          {mobileImages.map((image) => (
-            <div
-              key={image.src}
-              className={cn("w-32 shrink-0 overflow-hidden rounded-lg border border-border/40 sm:w-40")}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                className="aspect-750/1624 w-full object-cover object-top"
-              />
-            </div>
-          ))}
-        </div>
-      )}
+    <div className="flex items-end justify-center gap-3">
+      <div className="w-36 -rotate-6 overflow-hidden rounded-2xl shadow-xl ring-1 ring-foreground/10 sm:w-44">
+        <img src={images[0].src} alt={images[0].alt} loading="lazy" className="w-full" />
+      </div>
+      <div className="z-10 w-40 overflow-hidden rounded-2xl shadow-xl ring-1 ring-foreground/10 sm:w-48">
+        <img src={images[1].src} alt={images[1].alt} loading="lazy" className="w-full" />
+      </div>
+      <div className="w-36 rotate-6 overflow-hidden rounded-2xl shadow-xl ring-1 ring-foreground/10 sm:w-44">
+        <img src={images[2].src} alt={images[2].alt} loading="lazy" className="w-full" />
+      </div>
     </div>
   )
 }

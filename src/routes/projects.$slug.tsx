@@ -34,7 +34,7 @@ function ProjectPage() {
   const { project } = Route.useLoaderData()
 
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-12 sm:py-16">
       <Link
         to="/"
         className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
@@ -43,8 +43,8 @@ function ProjectPage() {
         Back
       </Link>
 
-      <div className="mt-12 space-y-12">
-        <div className="space-y-3">
+      <div className="mt-8 space-y-8">
+        <div className="space-y-2">
           <div className="flex items-center gap-3">
             <h1 className="text-3xl font-medium tracking-[-0.03em]">{project.name}</h1>
             <Badge variant={project.status === "live" ? "secondary" : "outline"}>
@@ -54,48 +54,52 @@ function ProjectPage() {
           <p className="text-base text-muted-foreground/80">{project.tagline}</p>
         </div>
 
-        {project.images?.hero && <ProjectHeroImage hero={project.images.hero} />}
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
+          {project.images?.hero && (
+            <div className="sm:w-3/5">
+              <ProjectHeroImage hero={project.images.hero} />
+            </div>
+          )}
+          <div className="space-y-6 sm:w-2/5">
+            <p className="leading-7 text-muted-foreground">{project.description}</p>
+            <div className="flex gap-3">
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(buttonVariants({ variant: "default" }), "gap-1.5")}
+                >
+                  Visit site
+                  <ArrowUpRightIcon size={14} />
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(buttonVariants({ variant: "outline" }), "gap-1.5")}
+                >
+                  View source
+                  <ArrowUpRightIcon size={14} />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
 
-        <p className="max-w-[56ch] leading-7 text-muted-foreground">{project.description}</p>
+        {project.images?.fan && <ProjectGallery images={project.images.fan} />}
 
-        {project.images?.gallery && project.images.gallery.length > 0 && (
-          <ProjectGallery images={project.images.gallery} />
-        )}
-
-        <div className="space-y-3 border-t border-border/40 pt-8">
+        <div className="space-y-2 border-t border-border/40 pt-6">
           <h2 className="text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">Stack</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5">
             {project.stack.map((tech) => (
               <Badge key={tech} variant="outline">
                 {tech}
               </Badge>
             ))}
           </div>
-        </div>
-
-        <div className="flex gap-4">
-          {project.url && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "default" }), "gap-1.5")}
-            >
-              Visit site
-              <ArrowUpRightIcon size={14} />
-            </a>
-          )}
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "outline" }), "gap-1.5")}
-            >
-              View source
-              <ArrowUpRightIcon size={14} />
-            </a>
-          )}
         </div>
       </div>
     </div>

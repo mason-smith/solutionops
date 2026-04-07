@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
 import { Hero } from "@/components/sections/hero"
-import { ProjectGrid } from "@/components/sections/project-grid"
+import { ProjectList } from "@/components/sections/project-list"
 
 export const Route = createFileRoute("/")({ component: HomePage })
 
@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <ProjectGrid />
+      <ProjectList />
     </>
   )
 }
