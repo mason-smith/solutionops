@@ -15,7 +15,7 @@ type CommandItem = {
 const commands: Array<CommandItem> = [
   { label: "Work", href: "/#work", icon: <BracketsCurlyIcon size={16} /> },
   { label: "GitHub", href: company.github, icon: <GithubLogoIcon size={16} />, external: true },
-  { label: "Contact", href: `mailto:${company.email}`, icon: <EnvelopeIcon size={16} />, external: true },
+  { label: "Contact", href: "/contact", icon: <EnvelopeIcon size={16} /> },
   ...projects.map((p) => ({
     label: p.name,
     href: `/projects/${p.slug}`,

@@ -13,5 +13,5 @@ export const company = {
 export const navigation = [
   { label: "Work", href: "/#work" },
   { label: "GitHub", href: company.github, external: true },
-  { label: "Contact", href: `mailto:${company.email}`, external: true },
+  { label: "Contact", href: "/contact" },
 ] as const

@@ -2,7 +2,7 @@ const SITE_URL = "https://solutionops.com"
 const SITE_NAME = "SolutionOps"
 const DEFAULT_TITLE = "SolutionOps | Crafted software."
 const DEFAULT_DESCRIPTION =
-  "Mason Smith is a Silicon Valley bred software engineer in Kentucky. Every project is a craft, not a transaction. When it ships with his name on it, it's built right."
+  "SolutionOps is a Kentucky-based software studio building custom websites and applications. Silicon Valley engineering with the care of a local shop. From static sites to full-stack systems, every project gets the same craftsmanship."
 
 type SeoOptions = {
   title?: string
