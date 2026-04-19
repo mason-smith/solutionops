@@ -4,7 +4,7 @@ import { Turnstile } from "@/components/turnstile"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"
+const TURNSTILE_SITE_KEY = "0x4AAAAAAC_s_TgRE030C5qg"
 
 type FormState = "idle" | "submitting" | "success" | "error"
 

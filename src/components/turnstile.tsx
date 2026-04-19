@@ -33,8 +33,26 @@ export function Turnstile({ siteKey, onVerify, onExpire, onError }: TurnstilePro
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetIdRef = useRef<string | null>(null)
 
+  const onVerifyRef = useRef(onVerify)
+  const onExpireRef = useRef(onExpire)
+  const onErrorRef = useRef(onError)
+
   useEffect(() => {
-    if (!containerRef.current) return
+    onVerifyRef.current = onVerify
+  }, [onVerify])
+  useEffect(() => {
+    onExpireRef.current = onExpire
+  }, [onExpire])
+  useEffect(() => {
+    onErrorRef.current = onError
+  }, [onError])
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    let cancelled = false
+    let intervalId: ReturnType<typeof setInterval> | null = null
 
     const existing = document.querySelector(`script[src="${TURNSTILE_SCRIPT}"]`)
     if (!existing) {
@@ -46,12 +64,13 @@ export function Turnstile({ siteKey, onVerify, onExpire, onError }: TurnstilePro
     }
 
     const render = () => {
-      if (!(containerRef.current && window.turnstile)) return
-      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+      if (cancelled || !window.turnstile || widgetIdRef.current) return
+      container.innerHTML = ""
+      widgetIdRef.current = window.turnstile.render(container, {
         sitekey: siteKey,
-        callback: onVerify,
-        "expired-callback": onExpire,
-        "error-callback": onError,
+        callback: (token) => onVerifyRef.current(token),
+        "expired-callback": () => onExpireRef.current?.(),
+        "error-callback": () => onErrorRef.current?.(),
         theme: "auto",
       })
     }
@@ -59,21 +78,25 @@ export function Turnstile({ siteKey, onVerify, onExpire, onError }: TurnstilePro
     if (window.turnstile) {
       render()
     } else {
-      const interval = setInterval(() => {
+      intervalId = setInterval(() => {
         if (window.turnstile) {
-          clearInterval(interval)
+          if (intervalId) clearInterval(intervalId)
+          intervalId = null
           render()
         }
       }, 100)
-      return () => clearInterval(interval)
     }
 
     return () => {
+      cancelled = true
+      if (intervalId) clearInterval(intervalId)
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current)
+        widgetIdRef.current = null
       }
+      container.innerHTML = ""
     }
-  }, [siteKey, onVerify, onExpire, onError])
+  }, [siteKey])
 
   return <div ref={containerRef} />
 }
