@@ -46,7 +46,6 @@ export const projects: Array<Project> = [
     ],
     url: "https://proof-barrel-prod.mason-smith.workers.dev",
     github: "https://github.com/solution-ops/proof.barrel",
-    featured: true,
     status: "live",
     images: {
       hero: {
@@ -68,19 +67,20 @@ export const projects: Array<Project> = [
     description:
       "I built this because I wanted a better way to track my coffee brewing. Not a spreadsheet, not a notes app. A real tool that helps you refine your process over time. Every change is tested in its own isolated environment before it goes live.",
     stack: ["React 19", "Hono", "Cloudflare Workers", "Neon Postgres", "Drizzle ORM", "TanStack Router", "Turborepo"],
-    url: "https://app.risecoffee.co",
+    url: "https://risecoffee.co",
     github: "https://github.com/solution-ops/rise.coffee",
+    featured: true,
     status: "live",
     images: {
       hero: {
-        dark: img("rise-coffee", "dashboard-desktop-dark.webp"),
-        light: img("rise-coffee", "dashboard-desktop-light.webp"),
-        alt: "Rise Coffee dashboard with brew history",
+        dark: img("rise-coffee", "landing-desktop-dark.webp"),
+        light: img("rise-coffee", "landing-desktop-light.webp"),
+        alt: "Rise Coffee landing page",
       },
       fan: [
         { src: img("rise-coffee", "brew-log-mobile-dark.webp"), alt: "Brew log on mobile" },
-        { src: img("rise-coffee", "dashboard-mobile-dark.webp"), alt: "Rise Coffee mobile dashboard" },
-        { src: img("rise-coffee", "bean-detail-mobile-light.webp"), alt: "Bean detail view" },
+        { src: img("rise-coffee", "brew-ledger-mobile-dark.webp"), alt: "Brew ledger on mobile" },
+        { src: img("rise-coffee", "brew-detail-mobile-light.webp"), alt: "Brew detail view" },
       ],
     },
   },
@@ -114,9 +114,9 @@ export const projects: Array<Project> = [
     description:
       "A Pacific Northwest contractor needed a site that matched the quality of their craftsmanship. Photography-first, warm tones, and a layout that lets the work breathe. Server-rendered and deployed to the edge. Ready for a CMS whenever they outgrow static content.",
     stack: ["React 19", "TanStack Start", "Tailwind CSS v4", "Cloudflare Pages", "Vite"],
-    url: "https://tamarack-bc7.pages.dev",
+    url: "https://tamarackremodelnw.com",
     github: "https://github.com/solution-ops/tamarack",
-    status: "in-development",
+    status: "live",
     images: {
       hero: {
         dark: img("tamarack", "home-desktop.webp"),
