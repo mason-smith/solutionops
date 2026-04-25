@@ -34,12 +34,8 @@ function ContactPage() {
         <div className="space-y-2">
           <p className="text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">On pricing</p>
           <p className="max-w-[60ch] text-sm leading-6 text-muted-foreground">
-            Every project is different. I price based on scope, complexity, and timeline. I don't publish fixed rates
-            because I want to give you an honest number, not a generic one.
-          </p>
-          <p className="max-w-[60ch] text-sm leading-6 text-muted-foreground">
-            Most engagements start with an estimated range after our first conversation. From there, we refine the
-            details and land on a fixed-price scope you can plan around before any work begins.
+            I quote per project, not per hour. You'll get an estimated range after we talk, and a fixed price before any
+            work begins.
           </p>
         </div>
       </footer>
